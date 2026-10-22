@@ -22,13 +22,6 @@ import { RestaurantLogo } from '../components/ui';
 import { ROLE_META, type Role } from '../lib/types';
 import { cx } from '../lib/utils';
 
-const DEMO_ACCOUNTS: { role: Role; email: string; password: string; label: string; tone: string }[] = [
-  { role: 'komandan', email: 'mispin@kampungkecil.id', password: 'mispin123', label: 'Mispin · Komandan', tone: 'from-red-900/60 to-red-950/60 border-red-500/40 text-red-200' },
-  { role: 'wakil', email: 'rahmat@kampungkecil.id', password: 'rahmat123', label: 'Rahmat · Wakil', tone: 'from-indigo-900/60 to-indigo-950/60 border-indigo-500/40 text-indigo-200' },
-  { role: 'koki', email: 'dewi@kampungkecil.id', password: 'dewi123', label: 'Rani · Koki Kepala', tone: 'from-amber-900/60 to-amber-950/60 border-amber-500/40 text-amber-200' },
-  { role: 'goreng', email: 'andi@kampungkecil.id', password: 'andi123', label: 'Andi · Goreng 1', tone: 'from-emerald-900/60 to-emerald-950/60 border-emerald-500/40 text-emerald-200' },
-];
-
 export default function Login() {
   const { login } = useStore();
   const navigate = useNavigate();
@@ -233,7 +226,7 @@ export default function Login() {
 
             {/* ===== AKUN DEMO ===== */}
             <div className="mt-4 rounded-2xl border border-white/10 bg-black/40 p-3.5 backdrop-blur-md">
-              <p className="mb-2 flex items-center justify-center gap-1.5 text-[9px] font-black uppercase tracking-[0.22em] text-[#f8f3ea]/45"><Users size={11} /> Masuk Cepat — Akun Demo</p>
+              <p className="mb-2 flex items-center justify-center gap-1.5 text-[9px] font-black uppercase tracking-[0.22em] text-[#f8f3ea]/45"><Users size={11} />.</p>
               <div className="grid grid-cols-2 gap-1.5">
                 {DEMO_ACCOUNTS.map((a) => (
                   <button
