@@ -22,6 +22,13 @@ import { RestaurantLogo } from '../components/ui';
 import { ROLE_META, type Role } from '../lib/types';
 import { cx } from '../lib/utils';
 
+const DEMO_ACCOUNTS: { role: Role; email: string; password: string; label: string; tone: string }[] = [
+  { role: 'komandan', email: 'mispin@kampungkecil.id', password: 'mispin123', label: 'Mispin · Komandan', tone: 'from-red-900/60 to-red-950/60 border-red-500/40 text-red-200' },
+  { role: 'wakil', email: 'rahmat@kampungkecil.id', password: 'rahmat123', label: 'Rahmat · Wakil', tone: 'from-indigo-900/60 to-indigo-950/60 border-indigo-500/40 text-indigo-200' },
+  { role: 'koki', email: 'dewi@kampungkecil.id', password: 'dewi123', label: 'Rani · Koki Kepala', tone: 'from-amber-900/60 to-amber-950/60 border-amber-500/40 text-amber-200' },
+  { role: 'goreng', email: 'andi@kampungkecil.id', password: 'andi123', label: 'Andi · Goreng 1', tone: 'from-emerald-900/60 to-emerald-950/60 border-emerald-500/40 text-emerald-200' },
+];
+
 export default function Login() {
   const { login } = useStore();
   const navigate = useNavigate();
@@ -72,13 +79,13 @@ export default function Login() {
   };
 
   const forgot = () =>
-    toast.info('Lupa password?', { description: 'Hubungi Komandan Mispin (KALIAN TAU KAN NOMERNYA) untuk reset password. Password baru akan diberikan secara langsung.' });
+    toast.info('Lupa password?', { description: 'Hubungi Komandan Mispin (0812-1100-0001) untuk reset password. Password baru akan diberikan secara langsung.' });
 
   return (
     <div className="relative flex min-h-dvh w-full overflow-hidden bg-[#170d08]">
       {/* ===== SISI KIRI — Visual ===== */}
       <div className="relative hidden w-[46%] shrink-0 flex-col justify-between overflow-hidden lg:flex xl:w-1/2">
-        <img src="/images/login-hero.jpg" alt="Nasi liwet, ayam kampung kecil, sambal cobek mertua" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/images/login-hero.jpg" alt="Nasi uduk, ayam goreng kalasan, sambal terasi Kampung Kecil" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#170d08]/85 via-[#170d08]/45 to-[#170d08]/92" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#170d08] via-transparent to-[#170d08]/70" />
 
@@ -224,7 +231,11 @@ export default function Login() {
               </Link>
             </div>
 
-            
+            {/* ===== AKUN DEMO ===== */}
+            <div className="mt-4 rounded-2xl border border-white/10 bg-black/40 p-3.5 backdrop-blur-md">
+              <p className="mb-2 flex items-center justify-center gap-1.5 text-[9px] font-black uppercase tracking-[0.22em] text-[#f8f3ea]/45"><Users size={11} /> Masuk Cepat — Akun Demo</p>
+              <div className="grid grid-cols-2 gap-1.5">
+                {DEMO_ACCOUNTS.map((a) => (
                   <button
                     key={a.email}
                     onClick={() => quickLogin(a.email, a.password)}
