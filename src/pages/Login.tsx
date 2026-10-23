@@ -115,8 +115,8 @@ export default function Login() {
             Sistem checklist operasional dapur — satu aplikasi untuk absensi, kualitas, kebersihan &amp; kepatuhan seluruh kru. Sejak 2023.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.65 }} className="mt-6 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#ffd87e]">
-            <span className="flex items-center gap-1.5 rounded-full border border-[#f5bd4f]/35 bg-black/45 px-3 py-1.5 backdrop-blur-sm"><Flame size={11} /> Ayam Goreng Kalasan</span>
-            <span className="flex items-center gap-1.5 rounded-full border border-[#f5bd4f]/35 bg-black/45 px-3 py-1.5 backdrop-blur-sm"><UtensilsCrossed size={11} /> Nasi Uduk Komplit</span>
+            <span className="flex items-center gap-1.5 rounded-full border border-[#f5bd4f]/35 bg-black/45 px-3 py-1.5 backdrop-blur-sm"><Flame size={11} /> Ayam Kampung Kecil</span>
+            <span className="flex items-center gap-1.5 rounded-full border border-[#f5bd4f]/35 bg-black/45 px-3 py-1.5 backdrop-blur-sm"><UtensilsCrossed size={11} /> Nasi liwet 4 orang</span>
             <span className="flex items-center gap-1.5 rounded-full border border-[#f5bd4f]/35 bg-black/45 px-3 py-1.5 backdrop-blur-sm"><BadgeCheck size={11} /> Halal &amp; Higienis</span>
           </motion.div>
         </div>
