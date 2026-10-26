@@ -19,9 +19,10 @@ import {
 import { toast } from 'sonner';
 import { useStore } from '../lib/store';
 import { RestaurantLogo } from '../components/ui';
-import { ROLE_META, type Role } from '../lib/types';
+import { ROLE_META } from '../lib/types';
 import { cx } from '../lib/utils';
-] 
+
+export default function Login() { 
 export default function Login() {
   const { login } = useStore();
   const navigate = useNavigate();
