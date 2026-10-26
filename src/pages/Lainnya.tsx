@@ -271,8 +271,14 @@ export default function Lainnya() {
             ))}
           </ul>
         )}
+// ... biarin semua atasnya sama persis sampai bagian bawah
+
       </Card>
-        <button onClick={store.logout} className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-red-800/25 bg-red-50 font-display text-[13px] font-black uppercase tracking-wide text-red-800 transition-all hover:border-red-800 hover:bg-red-100"><LogOut size={18} /> Keluar dari Aplikasi</button>
+
+      <div className="pt-2">
+        <button onClick={store.logout} className="flex h-14 w-full items-center justify-center gap-2 rounded-2xl border-2 border-red-800/25 bg-red-50 font-display text-[13px] font-black uppercase tracking-wide text-red-800 transition-all hover:border-red-800 hover:bg-red-100">
+          <LogOut size={18} /> Keluar dari Aplikasi
+        </button>
       </div>
     </div>
   );
