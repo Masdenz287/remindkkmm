@@ -272,14 +272,6 @@ export default function Lainnya() {
           </ul>
         )}
       </Card>
-
-      {/* ============ ZONA DEMO & KELUAR ============ */}
-      <div className="flex flex-col gap-2 sm:flex-row">
-        <Card className="flex flex-1 items-center gap-3 border-dashed p-3">
-          <Info size={18} className="shrink-0 text-[#152a46]" />
-          <p className="min-w-0 flex-1 text-[10px] font-semibold leading-snug text-[#20120c]/60"><b>Mode Demo.</b> Data tersimpan di perangkat ini (localStorage) mengikuti arsitektur PostgreSQL/Supabase pada versi produksi.</p>
-          <button onClick={() => { if (confirm('Kembalikan seluruh data ke kondisi awal demo?')) { store.resetDemoData(); toast.success('Data demo dipulihkan.'); } }} className="flex h-9 shrink-0 items-center gap-1 rounded-lg border border-black/15 px-2.5 text-[9px] font-black uppercase tracking-wide text-[#20120c]/65 hover:bg-black/5"><RotateCcw size={12} /> Reset</button>
-        </Card>
         <button onClick={store.logout} className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-red-800/25 bg-red-50 font-display text-[13px] font-black uppercase tracking-wide text-red-800 transition-all hover:border-red-800 hover:bg-red-100"><LogOut size={18} /> Keluar dari Aplikasi</button>
       </div>
     </div>
